@@ -1,5 +1,7 @@
 .sidebar {
-  width: max(2%, 180px);
+  width: max(2%, 190px);
+
+  box-sizing: border-box;
   height: 100vh;
 
   .navbar-nav {
@@ -14,8 +16,14 @@
     align-items: center;
     gap: 1rem;
     border-radius: 10px;
+    transition: 150ms;
     &:hover {
-      background-color: hsl(240, 75%, 80%);
+      color: inherit;
+      background-color: hsla(241, 100%, 50%, 50%);
+    }
+    + .active-item {
+      color: inherit;
+      outline: 1px solid black;
     }
   }
 }

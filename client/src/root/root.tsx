@@ -1,30 +1,33 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "@pages/Home/home";
-import Explore from "@pages/Explore/explore";
+import HomePage from "@pages/Home/home";
+import ExplorePage from "@pages/Explore/explore";
 import ThemeContext, { themes } from "@context/theme";
 import { useState } from "react";
+import MyProfilePage from "@pages/My-Profile/my-profile";
+import NotificationsPage from "@pages/Notifications/notifications";
+import SavedPage from "@pages/Saved/saved";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <HomePage />,
   },
   {
     path: "/explore",
-    element: <Explore />,
+    element: <ExplorePage />,
   },
   {
     path: "/notifications",
-    element: <>Notifications</>,
+    element: <NotificationsPage />,
   },
   {
     path: "/saved",
-    element: <>Saved</>,
+    element: <SavedPage />,
   },
   {
     path: "/my-profile",
-    element: <>My profile</>,
+    element: <MyProfilePage />,
   },
 ]);
 
@@ -33,7 +36,7 @@ export default function App() {
     typeof themes.dark | typeof themes.light
   >(themes.dark);
   const toggleTheme = () => {
-    if (theme.bg === "bg-dark") {
+    if (theme.background === "bg-black") {
       setTheme(themes.light);
     } else {
       setTheme(themes.dark);

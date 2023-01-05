@@ -13,17 +13,20 @@ import { IconContext } from "react-icons";
 
 export default function Sidebar(props: { user: {} }) {
   const { theme } = useContext(ThemeContext);
+
   return (
-    <nav className="navbar navbar-expand-lg sidebar d-flex flex-column">
+    <nav
+      className={`navbar navbar-expand-lg sidebar d-flex flex-column ${theme.middleground}`}
+    >
       <h1 className="navbar-brand">Logo</h1>
       <IconContext.Provider
         value={{
           size: 32,
-          className: `sidebar-icons text-${theme.color}` /* icon color set with boostrap class */,
+          className: `sidebar-icons text-${theme.foreground}` /* icon color set with boostrap class */,
         }}
       >
         <div
-          className={`navbar-nav d-flex flex-column text-${theme.color}`}
+          className={`navbar-nav d-flex flex-column text-${theme.foreground}`}
         >
           <BootNavLink to="/">
             <BsHouse />
@@ -41,7 +44,7 @@ export default function Sidebar(props: { user: {} }) {
             <BsBookmarkPlus />
             Saved
           </BootNavLink>
-          <BootNavLink to="my-profile">
+          <BootNavLink to="/my-profile">
             <BsPerson />
             My Profile
           </BootNavLink>
@@ -51,16 +54,13 @@ export default function Sidebar(props: { user: {} }) {
   );
 }
 
-interface BootNavLinkProps extends React.PropsWithChildren {
-  to: string;
-}
-function BootNavLink(props: BootNavLinkProps) {
+function BootNavLink(props: React.PropsWithChildren & { to: string }) {
   return (
     <NavLink
       to={props.to}
       className={({ isActive }) =>
         `nav-item nav-link sidebar-item ${
-          isActive ? "text-warning active" : ""
+          isActive ? "active-item text-warning" : ""
         }`
       }
     >
