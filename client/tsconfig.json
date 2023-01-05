@@ -23,7 +23,7 @@
       "@images/*": ["src/assets/images/*"],
       "@styles/*": ["src/assets/styles/*"],
       "@data/*": ["src/data/*"],
-      "@utils/*": ["src/utils*"],
+      "@li/*": ["src/lib*"],
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
       "@root/*": ["src/root/*"],
