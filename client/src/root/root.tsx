@@ -1,6 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "@pages/Home";
+import Home from "@pages/Home/home";
+import Explore from "@pages/Explore/explore";
+import ThemeContext, { themes } from "@context/theme";
+import { useState } from "react";
 
 const router = createBrowserRouter([
   {
@@ -9,7 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/explore",
-    element: <>Explore</>,
+    element: <Explore />,
   },
   {
     path: "/notifications",
@@ -26,5 +29,19 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  const [theme, setTheme] = useState<
+    typeof themes.dark | typeof themes.light
+  >(themes.dark);
+  const toggleTheme = () => {
+    if (theme.bg === "bg-dark") {
+      setTheme(themes.light);
+    } else {
+      setTheme(themes.dark);
+    }
+  };
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <RouterProvider router={router} />
+    </ThemeContext.Provider>
+  );
 }

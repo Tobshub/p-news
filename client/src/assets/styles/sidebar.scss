@@ -1,4 +1,21 @@
 .sidebar {
   width: max(2%, 180px);
   height: 100vh;
+
+  .navbar-nav {
+    gap: 1.4rem;
+  }
+
+  &-item {
+    font-size: 20px;
+    color: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 10px;
+    &:hover {
+      background-color: hsl(240, 75%, 80%);
+    }
+  }
 }

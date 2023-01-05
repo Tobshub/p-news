@@ -27,6 +27,7 @@
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
       "@root/*": ["src/root/*"],
+      "@context/*": ["src/context/*"],
       "@server": ["../server/*"]
     }
   },
