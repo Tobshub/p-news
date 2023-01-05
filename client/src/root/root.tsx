@@ -1,9 +1,10 @@
+import Home from "@pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <>Hello world</>,
+    element: <Home />,
   },
   {
     path: "/explore",
@@ -11,11 +12,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/notifications",
-    element: <>Explore</>,
+    element: <>Notifications</>,
   },
   {
     path: "/saved",
-    element: <>Explore</>,
+    element: <>Saved</>,
   },
   {
     path: "/my-profile",
