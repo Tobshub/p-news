@@ -1,5 +1,6 @@
-import Home from "@pages/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "@pages/Home";
 
 const router = createBrowserRouter([
   {
