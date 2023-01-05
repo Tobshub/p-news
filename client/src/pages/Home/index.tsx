@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-100 h-100">
       <SideBarLayout user={{}}>
         <Outlet />
       </SideBarLayout>
