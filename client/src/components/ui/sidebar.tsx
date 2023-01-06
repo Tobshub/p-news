@@ -16,7 +16,7 @@ export default function Sidebar(props: { user: {} }) {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg sidebar d-flex flex-column ${theme.middleground}`}
+      className={`navbar navbar-expand-lg sidebar d-flex flex-column ${theme.middleground} text-${theme.foreground}`}
     >
       <h1 className="navbar-brand">Logo</h1>
       <IconContext.Provider
@@ -25,9 +25,7 @@ export default function Sidebar(props: { user: {} }) {
           className: `sidebar-icons text-${theme.foreground}` /* icon color set with boostrap class */,
         }}
       >
-        <div
-          className={`navbar-nav d-flex flex-column text-${theme.foreground}`}
-        >
+        <div className={`navbar-nav d-flex flex-column`}>
           <BootNavLink to="/">
             <BsHouse />
             Home

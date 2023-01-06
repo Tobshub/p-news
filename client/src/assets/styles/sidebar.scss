@@ -1,8 +1,10 @@
 .sidebar {
   width: max(2%, 190px);
-
-  box-sizing: border-box;
   height: 100vh;
+
+  h1 {
+    color: inherit;
+  }
 
   .navbar-nav {
     gap: 1.4rem;
