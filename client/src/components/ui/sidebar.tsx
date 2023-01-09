@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate, useNavigate } from "react-router-dom";
 import {
   BsHouse,
   BsGlobe,
@@ -13,10 +13,11 @@ import { IconContext } from "react-icons";
 
 export default function Sidebar(props: { user: {} }) {
   const { theme } = useContext(ThemeContext);
+  const navigate = useNavigate();
 
   return (
     <nav
-      className={`navbar navbar-expand-lg sidebar d-flex flex-column ${theme.middleground} ${theme.foreground}`}
+      className={`navbar navbar-expand-lg sidebar d-flex flex-column ${theme.middleground}`}
     >
       <h1 className="navbar-brand">Logo</h1>
       <IconContext.Provider
@@ -47,6 +48,14 @@ export default function Sidebar(props: { user: {} }) {
             <BsPerson />
             My Profile
           </BootNavLink>
+        </div>
+        <div className="d-flex flex-column ">
+          <button
+            onClick={() => navigate("/new-post", { replace: true })}
+            className={`btn btn-primary`}
+          >
+            New Post
+          </button>
         </div>
       </IconContext.Provider>
     </nav>

@@ -6,7 +6,9 @@ import { Outlet } from "react-router-dom";
 export default function ExplorePage() {
   const themeContext = useContext(ThemeContext);
   return (
-    <div className={`page explore ${themeContext.theme.background}`}>
+    <div
+      className={`page explore ${themeContext.theme.background} ${themeContext.theme.foreground}`}
+    >
       <SideBarLayout user={{}}>
         <Outlet />
       </SideBarLayout>

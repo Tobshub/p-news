@@ -6,7 +6,9 @@ import { Outlet } from "react-router-dom";
 export default function HomePage() {
   const themeContext = useContext(ThemeContext);
   return (
-    <div className={`page home ${themeContext.theme.background}`}>
+    <div
+      className={`page home ${themeContext.theme.background} ${themeContext.theme.foreground}`}
+    >
       <SideBarLayout user={{}}>
         <Outlet />
       </SideBarLayout>

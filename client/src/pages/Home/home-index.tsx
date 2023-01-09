@@ -7,7 +7,7 @@ export default function HomeIndex() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className={`index ${theme.foreground}`}>
+    <div className={`index`}>
       <SearchBar />
       <ArticleFlow />
     </div>
