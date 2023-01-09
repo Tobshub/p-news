@@ -15,3 +15,12 @@ body,
   height: 100vh;
 }
 
+// by default all index pages occupy as much space as possible
+.page > * > .index {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+

@@ -7,11 +7,18 @@ import { useState } from "react";
 import MyProfilePage from "@pages/My-Profile/my-profile";
 import NotificationsPage from "@pages/Notifications/notifications";
 import SavedPage from "@pages/Saved/saved";
+import HomeIndex from "@pages/Home/home-index";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+    children: [
+      {
+        index: true,
+        element: <HomeIndex />,
+      },
+    ],
   },
   {
     path: "/explore",
@@ -36,7 +43,7 @@ export default function App() {
     typeof themes.dark | typeof themes.light
   >(themes.dark);
   const toggleTheme = () => {
-    if (theme.background === "bg-black") {
+    if (theme.background === "bg-dark") {
       setTheme(themes.light);
     } else {
       setTheme(themes.dark);
