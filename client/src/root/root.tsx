@@ -8,6 +8,7 @@ import MyProfilePage from "@pages/My-Profile/my-profile";
 import NotificationsPage from "@pages/Notifications/notifications";
 import SavedPage from "@pages/Saved/saved";
 import HomeIndex from "@pages/Home/home-index";
+import NewPosts from "@pages/Home/children/new-posts";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomeIndex />,
+      },
+      {
+        path: "/new-post",
+        element: <NewPosts />,
       },
     ],
   },
