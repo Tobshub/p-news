@@ -31,7 +31,7 @@ export default function SearchBar() {
             className: `${theme.foreground}`,
           }}
         >
-          <button className="btn btn-outline-secondary">
+          <button className="btn btn-outline-secondary" type="submit">
             <BsSearch />
           </button>
         </IconContext.Provider>
