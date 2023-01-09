@@ -6,7 +6,7 @@ interface SideBarLayoutProps extends React.PropsWithChildren {
 
 export default function SideBarLayout(props: SideBarLayoutProps) {
   return (
-    <div className="w-100 h-100 d-flex align-items-center justify-content-between">
+    <div className="w-100 h-100 d-flex justify-content-start">
       <Sidebar user={props.user} />
       {props.children}
     </div>

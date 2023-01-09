@@ -16,13 +16,14 @@ export default function Sidebar(props: { user: {} }) {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg sidebar d-flex flex-column ${theme.middleground} text-${theme.foreground}`}
+      className={`navbar navbar-expand-lg sidebar d-flex flex-column ${theme.middleground} ${theme.foreground}`}
     >
       <h1 className="navbar-brand">Logo</h1>
       <IconContext.Provider
         value={{
-          size: 32,
-          className: `sidebar-icons text-${theme.foreground}` /* icon color set with boostrap class */,
+          style: { verticalAlign: "middle" },
+          size: "32px",
+          className: `sidebar-icons ${theme.foreground}` /* icon color set with boostrap class */,
         }}
       >
         <div className={`navbar-nav d-flex flex-column`}>

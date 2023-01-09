@@ -1,6 +1,7 @@
 .sidebar {
   width: max(2%, 190px);
   height: 100vh;
+  padding: 0 0.4rem;
 
   h1 {
     color: inherit;
@@ -11,6 +12,7 @@
   }
 
   &-item {
+    padding: 0.75rem;
     font-size: 20px;
     color: inherit;
     display: flex;
@@ -21,7 +23,7 @@
     transition: 150ms;
     &:hover {
       color: inherit;
-      background-color: hsla(241, 100%, 50%, 50%);
+      background-color: rgba(173, 173, 173, 0.685);
     }
     + .active-item {
       color: inherit;
